@@ -7,13 +7,22 @@ class HTTPClient:
         self.session = ClientSession(
             base_url = base_url,
             headers={
+                'Accepts': 'application/json',
                 'X-CMC_PRO_API_KEY': api_key,
             }
         )
     
-    # https://sandbox-api.coinmarketcap.com/
-    
 class CMCHTTPClient(HTTPClient):
     async def get_listings(self):
-        async with self._session.get('/v1/cryptocurrency/listings/latest') as resp:
-            result = await res.json()
+        async with self.session.get('/v1/cryptocurrency/listings/latest') as resp:
+            result = await resp.json()
+            return result['data']
+        
+    async def get_current(self, currency_id: int):
+        async with self.session.get(
+            '/v1/cryptocurrency/quotes/latest',
+            params={"id": currency_id}
+        ) as resp:
+            result = await resp.json()
+            return result['data'][str(currency_id)]
+        
