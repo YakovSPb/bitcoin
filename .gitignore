@@ -1,49 +1,52 @@
-# Байт-код Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
+# # Байт-код Python
+# __pycache__/
+# *.py[cod]
+# *$py.class
+# *.so
 
-# Виртуальные окружения
-.env
-.venv
-venv/
-ENV/
-env/
+backend/venv
+frontend/node_modules
 
-# Артефакты сборки и дистрибуции
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-*.egg
-*.manifest
-*.spec
+# # Виртуальные окружения
+# .env
+# .venv
+# venv/
+# ENV/
+# env/
 
-# Логи и результаты тестирования
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-htmlcov/
+# # Артефакты сборки и дистрибуции
+# build/
+# develop-eggs/
+# dist/
+# downloads/
+# eggs/
+# .eggs/
+# lib/
+# lib64/
+# parts/
+# sdist/
+# var/
+# wheels/
+# *.egg-info/
+# *.egg
+# *.manifest
+# *.spec
 
-# Файлы редакторов и IDE
-# PyCharm
-.idea/
-# VS Code
-.vscode/
+# # Логи и результаты тестирования
+# .tox/
+# .nox/
+# .coverage
+# .coverage.*
+# .cache
+# nosetests.xml
+# coverage.xml
+# *.cover
+# .hypothesis/
+# .pytest_cache/
+# htmlcov/
+
+# # Файлы редакторов и IDE
+# # PyCharm
+# .idea/
+# # VS Code
+# .vscode/
