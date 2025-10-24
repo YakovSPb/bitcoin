@@ -3,7 +3,7 @@ from src.config import settings
 
 
 cmc_client = CMCHTTPClient(
-    base_url="https://sandbox-api.coinmarketcap.com",
+    base_url="https://pro-api.coinmarketcap.com",
     api_key=settings.cmc_api_key
 )
 

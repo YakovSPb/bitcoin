@@ -1,5 +1,5 @@
 from aiohttp import ClientSession
-
+from async_lru import alru_cache
 
 
 class HTTPClient:
@@ -13,11 +13,12 @@ class HTTPClient:
         )
     
 class CMCHTTPClient(HTTPClient):
+    @alru_cache
     async def get_listings(self):
         async with self.session.get('/v1/cryptocurrency/listings/latest') as resp:
             result = await resp.json()
             return result['data']
-        
+    @alru_cache   
     async def get_current(self, currency_id: int):
         async with self.session.get(
             '/v1/cryptocurrency/quotes/latest',
